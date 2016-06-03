@@ -1,6 +1,6 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
-import ENV from 'chirripo/config/environment';
+import ENV from 'mt-chirripo.ember-auth/config/environment';
 
 export default AjaxService.extend({
   host: ENV.apiHost,

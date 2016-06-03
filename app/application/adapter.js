@@ -1,9 +1,9 @@
 import Ember from 'ember';
 import ActiveModelAdapter from 'active-model-adapter';
-import ENV from 'chirripo/config/environment';
+import ENV from 'mt-chirripo.ember-auth/config/environment';
 
 export default ActiveModelAdapter.extend({
-  host: ENV.apiHost,  
+  host: ENV.apiHost,
   auth: Ember.inject.service(),
 
   headers: Ember.computed('auth.credentials.token', {
