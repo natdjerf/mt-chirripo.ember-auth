@@ -4,8 +4,9 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'mt-chirripo.ember-auth',
     environment: environment,
-    baseURL: '/chirripo/',
-    locationType: 'hash',
+    baseURL: '/',
+    locationType: 'auto',
+    apiHost: 'http://localhost:3000',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -41,6 +42,9 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
+    ENV.baseURL = '/mt-chirripo.ember-auth/';
+    ENV.localhost = 'hash';
+    ENV.apiHost = 'http://localhost:3000';
 
   }
 

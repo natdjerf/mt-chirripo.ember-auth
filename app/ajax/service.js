@@ -1,7 +1,9 @@
 import Ember from 'ember';
 import AjaxService from 'ember-ajax/services/ajax';
+import ENV from 'chirripo/config/environment';
 
 export default AjaxService.extend({
+  host: ENV.apiHost,
   auth: Ember.inject.service(),
   headers: Ember.computed('auth.credentials.token', {
     get () {
