@@ -1,0 +1,10 @@
+<div>
+    {{reservation-booking reservation=reservation}}
+</div>
+
+
+<div>
+{{#each model as |reservation|}}
+  {{my-reservations reservation=reservation}}
+{{/each}}
+</div>
