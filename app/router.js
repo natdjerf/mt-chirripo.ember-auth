@@ -13,6 +13,7 @@ Router.map(function () {
   this.route('reservations');
   this.route('reservation', { path: '/reservations/:id' });
   this.route('new');
+  this.route('update', { path: '/reservations/:id/update' });
 });
 
 export default Router;
