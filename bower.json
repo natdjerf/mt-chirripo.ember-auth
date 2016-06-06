@@ -8,6 +8,7 @@
     "bootstrap-sass": "^3.3.6",
     "blob-polyfill": "^1.0.20150320",
     "pikaday": "^1.4.0",
-    "moment": "^2.13.0"
+    "moment": "^2.13.0",
+    "bootstrap-datepicker": "^1.6.1"
   }
 }
