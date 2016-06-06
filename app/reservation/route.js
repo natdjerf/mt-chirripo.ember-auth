@@ -5,10 +5,10 @@ export default Ember.Route.extend({
     return this.get('store').findRecord('reservation', params.id);
   },
 
-  actions: {
-    createReservation (data) {
-      let reservation = this.get('store').createRecord('reservation', data);
-      return reservation.save();
-    }
-  }
+  // actions: {
+  //   createReservation (data) {
+  //     let reservation = this.get('store').createRecord('reservation', data);
+  //     return reservation.save();
+  //   }
+  // }
 });
