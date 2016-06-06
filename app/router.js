@@ -12,6 +12,7 @@ Router.map(function () {
   this.route('users');
   this.route('reservations');
   this.route('reservation', { path: '/reservations/:id' });
+  this.route('new');
 });
 
 export default Router;
