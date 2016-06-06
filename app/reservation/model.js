@@ -9,6 +9,8 @@ export default DS.Model.extend({
   permit_start_date : DS.attr('string', {
     defaultValue() { return new Date(); }
   }),
-  permit_end_date : DS.attr('date'),
+  permit_end_date : DS.attr('string', {
+    defaultValue() { return new Date(); }
+  }),
   total_cost : DS.attr('number')
 });

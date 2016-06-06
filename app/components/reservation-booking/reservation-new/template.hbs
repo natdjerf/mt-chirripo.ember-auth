@@ -1,7 +1,7 @@
 <div>
   <form {{action "submit" form on="submit"}}>
-    {{input type="date" placeholder="permit_start_date" class="input-group form-control" value=form.permit_start_date}}
     {{bootstrap-datepicker date=mydate valueFormat='YYYY-MM-DD' placeholder="permit_start_date" class="input-group form-control" value=form.permit_start_date}}
+    {{bootstrap-datepicker date=mydate valueFormat='YYYY-MM-DD' placeholder="permit_end_date" class="input-group form-control" value=form.permit_end_date}}
     {{input type="number" placeholder="permit_quantity"
     class="input-group form-control" value=form.permit_quantity}}
     {{input type="number" placeholder="lodging_quantity" class="input-group form-control" value=form.lodging_quantity}}
