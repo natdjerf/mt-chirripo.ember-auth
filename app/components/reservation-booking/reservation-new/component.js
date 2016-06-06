@@ -4,9 +4,12 @@ export default Ember.Component.extend({
   form: {},
   actions: {
     submit(reservation) {
-      Ember.set(reservation, 'reservation', this.get('user'));
-      console.log(reservation);
+      // Ember.set(reservation, 'reservation', this.get('user'));
+      // console.log(reservation);
+      // this.sendAction('submit', this.get('form'));
+      Ember.set(reservation,'reservation', this.get('form'));
       this.sendAction('submit', this.get('form'));
+      console.log(reservation);
     },
   },
 });
