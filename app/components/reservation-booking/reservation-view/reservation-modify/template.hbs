@@ -1,0 +1,22 @@
+<h2>ON MODIFY V2</h2>
+
+<div>
+  <ul>
+    <li>Number of Permits:{{reservation.permit_quantity}}</li>
+    <li>Number of Lodging Reservations: {{reservation.lodging_quantity}}</li>
+    <li>Permit Start Date: {{reservation.permit_start_date}}</li>
+    <li>Permit End Date: {{reservation.permit_end_date}}</li>
+    <li>Total Cost:{{reservation.total_cost}}</li>
+  </ul>
+</div>
+
+<form {{action "modify" form on="submit"}}>
+  {{bootstrap-datepicker date=mydate valueFormat='YYYY-MM-DD' placeholder="permit_start_date" class="input-group form-control" value=form.permit_start_date}}
+  {{bootstrap-datepicker date=mydate valueFormat='YYYY-MM-DD' placeholder="permit_end_date" class="input-group form-control" value=form.permit_end_date}}
+  {{input type="number" placeholder="permit_quantity"
+  class="input-group form-control" value=form.permit_quantity}}
+  {{input type="number" placeholder="lodging_quantity" class="input-group form-control" value=form.lodging_quantity}}
+  {{input type="number" placeholder="total_cost" class="input-group form-control"
+  value=form.total_cost}}
+  <input type="submit" class="btn btn-succss">
+</form>

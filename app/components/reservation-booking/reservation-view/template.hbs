@@ -11,3 +11,7 @@
 </div>
 
 <button {{action "deleteReservation"}} class="btn btn-danger">Cancel This Reservation</button>
+
+{{#link-to 'update' reservation}}
+<button class="btn btn-success">Modify This Reservation</button>
+{{/link-to}}
