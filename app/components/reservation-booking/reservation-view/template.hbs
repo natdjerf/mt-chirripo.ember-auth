@@ -1,5 +1,13 @@
-<h2>My Reservation</h2>
+<h2>Upcoming Reservations</h2>
 
-{{reservation.permit_start_date}}
-{{reservation.permit_end_date}}
-{{reservation.total_cost}}
+<div>
+  <ul>
+    <li>Number of Permits:{{reservation.permit_quantity}}</li>
+    <li>Number of Lodging Reservations: {{reservation.lodging_quantity}}</li>
+    <li>Permit Start Date: {{reservation.permit_start_date}}</li>
+    <li>Permit End Date: {{reservation.permit_end_date}}</li>
+    <li>Total Cost:{{reservation.total_cost}}</li>
+  </ul>
+</div>
+
+<button {{action "deleteReservation"}} class="btn btn-danger">Cancel This Reservation</button>
