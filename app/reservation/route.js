@@ -27,7 +27,11 @@ export default Ember.Route.extend({
       let store = this.get('store');
        store.findRecord('reservation', id)
       .then((reservation) => {
-        reservation.set = ('reservation.permit_quantity', data.permit_quantity);
+        reservation.set = ('reservation', data);
+        // reservation.set = ('reservation.lodging_quantity', data.permit_quantity);
+        // reservation.set = ('reservation.permit_quantity', data.permit_quantity);
+        // reservation.set = ('reservation.permit_quantity', data.permit_quantity);
+        // reservation.set = ('reservation.permit_quantity', data.permit_quantity);
         return reservation;
       })
       .then((reservation) => reservation.save())
