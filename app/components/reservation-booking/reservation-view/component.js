@@ -8,7 +8,8 @@ export default Ember.Component.extend({
       this.sendAction('deleteReservation', reservation);
     },
     modifyReservation () {
-      let reservation = {};
+      let reservation = this.get('reservation');
+
       reservation.permit_quantity = this.$('span.permit_quantity').text();
       reservation.lodging_quantity = this.$('span.lodging_quantity').text();
       reservation.permit_start_ = this.$('span.permit_start_date').text();
