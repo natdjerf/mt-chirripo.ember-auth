@@ -7,6 +7,9 @@
         {{#if isAuthenticated}}
         <li>{{#link-to "users"}}Users{{/link-to}}</li>
         {{/if}}
+        {{#if isAuthenticated}}
+        <li>{{#link-to "reservations"}}Reservations{{/link-to}}</li>
+        {{/if}}
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
