@@ -8,6 +8,7 @@ export default Ember.Route.extend({
   actions : {
     deleteReservation(data) {
       console.log('reservation route', data);
+      data.destroyRecord();
     },
     modifyReservation (data) {
       console.log('reservation route', data);
