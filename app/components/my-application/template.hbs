@@ -10,6 +10,7 @@
         {{#if isAuthenticated}}
         <li>{{#link-to "reservations"}}Reservations{{/link-to}}</li>
         {{/if}}
+        <li>{{#link-to "about"}}About{{/link-to}}</li>        
       </ul>
       <ul class="nav navbar-nav navbar-right">
         {{#if isAuthenticated}}
@@ -24,7 +25,7 @@
   </div>
 </nav>
 
-<h1>Welcome to Ember!</h1>
+<h1>Cerro Chirripó National Park</h1>
 
 {{#each flashMessages.queue as |flash|}}
   {{flash-message flash=flash}}
