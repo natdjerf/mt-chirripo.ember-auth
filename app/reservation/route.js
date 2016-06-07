@@ -10,11 +10,19 @@ export default Ember.Route.extend({
 
   actions : {
     deleteReservation(data) {
-      console.log('reservation route', data);
-      data.destroyRecord();
+      data.destroyRecord()
+      .then(() => this.transitionTo('application'))
+      .then(() => {
+        this.get('flashMessages')
+        .warning('Your resevation has been cancelled.');
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There seems to be a problem with your request. Please try again');
+      });
+
     },
     modifyReservation (data) {
-      console.log(this);
       let id = this.context.id;
       let store = this.get('store');
        store.findRecord('reservation', id)
