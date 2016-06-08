@@ -5,7 +5,15 @@ export default Ember.Route.extend({
     createReservation (data) {
       console.log('create action', data);
       let reservation = this.get('store').createRecord('reservation', data);
-      return reservation.save();
+      return reservation.save()
+      .then(() => {
+        this.get('flashMessages')
+        .success('Your reservation has been saved');
+      })
+      .catch(() => {
+        this.get('flashMessages')
+        .danger('There seems to be a problem with your request. Please try again');
+        });
     }
   }
 });
