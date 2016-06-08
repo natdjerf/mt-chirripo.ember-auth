@@ -7,16 +7,35 @@
   <p>Includes sheet, pillow, &amp; sleeping bag</p>
 </div>
 <div>
-<form {{action "submit" form on="submit"}}>
-  {{input type="number" placeholder="Permit Quantity"
-  class="input-group form-control" value=form.permit_quantity}}
-  {{input type="number" placeholder="Lodging Quantity" class="input-group form-control" value=form.lodging_quantity}}
-  {{bootstrap-datepicker autoclose=true date=mydate todayHighlight=true valueFormat='YYYY-MM-DD' placeholder="Permit Start Date" class="input-group form-control" value=form.permit_start_date}}
-  {{bootstrap-datepicker autoclose=true startDate=form.permit_start_date date=mydate valueFormat='YYYY-MM-DD' placeholder="Permit End Date" class="input-group form-control" value=form.permit_end_date}}
-
+<form {{action "submit" reservation on="submit"}}>
+    {{input type="number"
+            placeholder="Permit Quantity"
+            class="input-group form-control"
+            value=reservation.permitQuantity}}
+    {{input type="number"
+            placeholder="Lodging Quantity"
+            class="input-group form-control"
+            value=reservation.lodgingQuantity}}
+    {{bootstrap-datepicker
+      autoclose=true
+      date=mydate
+      todayHighlight=true
+      valueFormat='YYYY-MM-DD'
+      placeholder="Permit Start Date"
+      class="input-group form-control"
+      value=reservation.permitStartDate}}
+    {{bootstrap-datepicker
+      autoclose=true
+      startDate=permitStartDate
+      date=mydate
+      valueFormat='YYYY-MM-DD'
+      placeholder="Permit End Date"
+      class="input-group form-control"
+      value=reservation.permitEndDate}}
 
   <h4>Total Cost:</h4>
-  <div>{{calculate-total form.permit_start_date form.permit_end_date form.permit_quantity form.lodging_quantity}}</div>
+  <div>${{reservation.totalCost}}</div>
+
   <input type="submit" class="btn btn-succss">
 </form>
 </div>
