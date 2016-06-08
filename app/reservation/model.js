@@ -2,7 +2,6 @@
 // import attr from 'ember-data/attr';
 import DS from 'ember-data';
 
-
 export default DS.Model.extend({
   permit_quantity : DS.attr('number'),
   lodging_quantity : DS.attr('number'),
@@ -13,4 +12,5 @@ export default DS.Model.extend({
     defaultValue() { return new Date(); }
   }),
   total_cost : DS.attr('number')
+  
 });
