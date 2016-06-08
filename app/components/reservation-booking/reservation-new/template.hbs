@@ -1,12 +1,22 @@
+<h1>Plan Your Trip</h1>
+
+<h4>Permits &amp; Lodging:</h4>
+<div>
+  <p>Park Entry Permit: $15 USD per person per day</p>
+  <p>Lodging Accomodations: $35 USD per person per night</p>
+  <p>Includes sheet, pillow, &amp; sleeping bag</p>
+</div>
+<div>
 <form {{action "submit" form on="submit"}}>
-  {{input type="number" placeholder="permit_quantity"
+  {{input type="number" placeholder="Permit Quantity"
   class="input-group form-control" value=form.permit_quantity}}
-  {{input type="number" placeholder="lodging_quantity" class="input-group form-control" value=form.lodging_quantity}}
-  {{bootstrap-datepicker date=mydate valueFormat='YYYY-MM-DD' placeholder="permit_start_date" class="input-group form-control" value=form.permit_start_date}}
-  {{bootstrap-datepicker date=mydate valueFormat='YYYY-MM-DD' placeholder="permit_end_date" class="input-group form-control" value=form.permit_end_date}}
+  {{input type="number" placeholder="Lodging Quantity" class="input-group form-control" value=form.lodging_quantity}}
+  {{bootstrap-datepicker autoclose=true date=mydate todayHighlight=true valueFormat='YYYY-MM-DD' placeholder="Permit Start Date" class="input-group form-control" value=form.permit_start_date}}
+  {{bootstrap-datepicker autoclose=true startDate=form.permit_start_date date=mydate valueFormat='YYYY-MM-DD' placeholder="Permit End Date" class="input-group form-control" value=form.permit_end_date}}
 
 
   <h4>Total Cost:</h4>
-  {{calculate-total form.permit_start_date form.permit_end_date form.permit_quantity form.lodging_quantity}}
+  <div>{{calculate-total form.permit_start_date form.permit_end_date form.permit_quantity form.lodging_quantity}}</div>
   <input type="submit" class="btn btn-succss">
 </form>
+</div>
