@@ -1,7 +1,7 @@
-{{#link-to 'reservation' reservation}}
-<h2>{{reservation.id}}</h2>
-{{/link-to}}
+<h2>Upcoming Reservation</h2>
 
-{{#link-to 'new'}}
-<h2>make reservation</h2>
-{{/link-to}}
+{{#each reservation as |reservation|}}
+  {{#link-to 'reservation' reservation}}
+    <h2>{{reservation.permit_start_date}}</h2>
+  {{/link-to}}
+{{/each}}
