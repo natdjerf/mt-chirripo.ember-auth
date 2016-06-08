@@ -1,7 +1,7 @@
-<h2>Upcoming Reservation</h2>
+<h2>Upcoming Reservations</h2>
 
 {{#each reservation as |reservation|}}
   {{#link-to 'reservation' reservation}}
-    <h2>{{reservation.permit_start_date}}</h2>
+    <h2>{{moment-format reservation.permitStartDate 'LL'}}</h2>
   {{/link-to}}
 {{/each}}
