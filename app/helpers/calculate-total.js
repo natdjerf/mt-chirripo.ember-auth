@@ -19,7 +19,6 @@ export function calculateTotal(params/*, hash*/) {
 
 
   return totalCost;
-
 }
 
 export default Ember.Helper.helper(calculateTotal);
