@@ -14,6 +14,7 @@ Router.map(function () {
   this.route('reservation', { path: '/reservations/:id' });
   this.route('new');
   this.route('about');
+  this.route('weather');
 });
 
 export default Router;
