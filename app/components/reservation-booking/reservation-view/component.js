@@ -43,10 +43,8 @@ export default Ember.Component.extend({
       Ember.set(this.reservation, 'permitEndDate', this.get('permitEndDate'));
       // Ember.set(this.reservation, 'totalCost', this.get('totalCost'));
 
-      Ember.set(this.reservation, 'totalCost', this.get('totalCost'));
+      Ember.set(this.reservation, 'totalCost', this.get('newReservation.totalCost'));
 
-      console.log('new reservation', 'newReservation');
-      console.log('reservation', 'reservation');
       this.sendAction('modifyReservation', reservation);
       this.toggleProperty('canUpdate');
     }

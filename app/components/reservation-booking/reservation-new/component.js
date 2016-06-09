@@ -28,9 +28,7 @@ export default Ember.Component.extend({
   actions: {
     submit(reservation) {
       Ember.set(reservation, 'totalCost', this.get('reservation.totalCost'));
-      console.log(this.get('reservation.totalCost'));
       this.sendAction('submit', reservation);
-      console.log('New reservation:', reservation);
     },
   },
 });
