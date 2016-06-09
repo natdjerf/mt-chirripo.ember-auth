@@ -1,6 +1,7 @@
 import Ember from 'ember';
 
 export function calculateTotal(params/*, hash*/) {
+
   let date1 = new Date(params[0]);
   let date2 = new Date(params[1]);
   let numPermits = Math.abs(params[2]);
@@ -17,8 +18,7 @@ export function calculateTotal(params/*, hash*/) {
 
   let totalCost = permitCost + lodgingCost;
 
-
-  return totalCost;
+  return isNaN(totalCost) ? 0 : totalCost;
 }
 
 export default Ember.Helper.helper(calculateTotal);
