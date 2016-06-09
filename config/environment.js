@@ -6,7 +6,7 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
-    apiHost: 'https://mt-chirripo-api.herokuapp.com',
+    apiHost: 'http://localhost:3000',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -49,6 +49,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.baseURL = '/mt-chirripo.ember-auth/';
     ENV.localhost = 'hash';
+    ENV.apiHost = 'https://mt-chirripo-api.herokuapp.com';
   }
 
   return ENV;
