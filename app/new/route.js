@@ -6,6 +6,7 @@ export default Ember.Route.extend({
       console.log('create action', data);
       let reservation = this.get('store').createRecord('reservation', data);
       return reservation.save()
+        .then(() => this.transitionTo('reservations'))
         .then(() => {
           this.get('flashMessages')
             .success('Your reservation has been saved');
