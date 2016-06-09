@@ -1,11 +1,3 @@
-body {
-  background: url(https://c4.staticflickr.com/1/685/22639053571_7680688325_k.jpg) no-repeat center center fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-}
-
 // @font-face {
 //   font-family: 'MyWebFont';
 //   src: url('webfont.eot'); /* IE9 Compat Modes */
@@ -35,19 +27,41 @@ body {
   src: url('/fonts/Redbud-Spurs.ttf')  format('truetype');
 }
 
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
 
+body.ember-application {
+  margin: 0;
+  padding: 0;
+}
+
+.index-header {
+    color: #fff;
+    display: table;
+    position: relative;
+    width: 100%;
+    height: 600px;
+}
 
 .index-header h1 {
+  display: table-cell;
   font-family: 'Redbud-Regular';
   text-transform: uppercase;
   font-size: 60px;
   -webkit-transform: rotate(-3deg);
-  /* Firefox */
-  // -moz-transform: rotate(-3deg);
-  /* IE */
+  -moz-transform: rotate(-3deg);
   -ms-transform: rotate(-3deg);
-  /* Opera */
   -o-transform: rotate(-3deg);
+  text-align: center;
+  vertical-align: middle;
+}
+
+.landing-section {
+  background-color: #fff;
+  height: 400px;
 }
 
 .glyphicon-map-marker {
@@ -62,5 +76,5 @@ body {
 
 .map-canvas {
     height: 500px;
-    width: 500px;
+    width: 200px;
 }
