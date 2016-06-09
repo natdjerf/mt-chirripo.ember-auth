@@ -1,47 +1,49 @@
+{{plan-trip}}
+
 <div class="plan section">
 <h1>Plan Your Trip</h1>
 
 <h4>Permits &amp; Lodging:</h4>
-<div class="plan-pricing">
-  <p>Park Entry Permit: $15 USD, per person, per day</p>
-  <p>Lodging Accomodations: $35 USD, per person, per night</p>
-  <p>Includes sheet, pillow, &amp; sleeping bag</p>
-</div>
-<div>
-<form {{action "submit" reservation on="submit"}}>
-    <span>Number of Park Entry Permits:</span>
-    {{input type="number"
-            placeholder="Permit Quantity"
-            class="input-group form-control"
-            value=reservation.permitQuantity}}
-    <span>Number of Beds at Crestones Base Camp:</span>
-    {{input type="number"
-            placeholder="Lodging Quantity"
-            class="input-group form-control"
-            value=reservation.lodgingQuantity}}
-    <span>First Day of Park Entry:</span>
-    {{bootstrap-datepicker
-      autoclose=true
-      date=mydate
-      todayHighlight=true
-      valueFormat='YYYY-MM-DD'
-      placeholder="Permit Start Date"
-      class="input-group form-control"
-      value=reservation.permitStartDate}}
-    <span>Last Day of Park Entry</span>
-    {{bootstrap-datepicker
-      autoclose=true
-      startDate=reservation.permitStartDate
-      date=mydate
-      valueFormat='YYYY-MM-DD'
-      placeholder="Permit End Date"
-      class="input-group form-control"
-      value=reservation.permitEndDate}}
+  <div class="plan-pricing">
+    <p>Park Entry Permit: $15 USD, per person, per day</p>
+    <p>Lodging Accomodations: $35 USD, per person, per night</p>
+    <p>Includes sheet, pillow, &amp; sleeping bag</p>
+  </div>
+  <div>
+  <form {{action "submit" reservation on="submit"}}>
+      <span>Number of Park Entry Permits:</span>
+      {{input type="number"
+              placeholder="Permit Quantity"
+              class="input-group form-control"
+              value=reservation.permitQuantity}}
+      <span>Number of Beds at Crestones Base Camp:</span>
+      {{input type="number"
+              placeholder="Lodging Quantity"
+              class="input-group form-control"
+              value=reservation.lodgingQuantity}}
+      <span>First Day of Park Entry:</span>
+      {{bootstrap-datepicker
+        autoclose=true
+        date=mydate
+        todayHighlight=true
+        valueFormat='YYYY-MM-DD'
+        placeholder="Permit Start Date"
+        class="input-group form-control"
+        value=reservation.permitStartDate}}
+      <span>Last Day of Park Entry</span>
+      {{bootstrap-datepicker
+        autoclose=true
+        startDate=reservation.permitStartDate
+        date=mydate
+        valueFormat='YYYY-MM-DD'
+        placeholder="Permit End Date"
+        class="input-group form-control"
+        value=reservation.permitEndDate}}
 
-  <h4>Total Cost:</h4>
-  <div>${{calculate-total reservation.permitStartDate reservation.permitEndDate reservation.permitQuantity reservation.lodgingQuantity}}</div>
+    <h4>Total Cost:</h4>
+    <div>${{calculate-total reservation.permitStartDate reservation.permitEndDate reservation.permitQuantity reservation.lodgingQuantity}}</div>
 
-  <input type="submit" class="btn btn-succss">
-</form>
-</div>
+    <input type="submit" class="btn btn-succss">
+  </form>
+  </div>
 </div>

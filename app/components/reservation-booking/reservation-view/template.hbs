@@ -1,24 +1,23 @@
 {{#unless canUpdate}}
-<div class="upcoming-res section">
 <h2>Upcoming Reservations</h2>
 <h3>{{moment-to-now reservation.permitStartDate hidePrefix=true allow-empty=true}} until your trip!</h3>
 
 <div>
-    <p>Number of Permits:
-      <span class="permit_quantity">{{reservation.permitQuantity}}</span>
-    </p>
-    <p>Number of Lodging Reservations:
-      <span class="lodging_quantity">{{reservation.lodgingQuantity}}</span>
-    </p>
-    <p>Dates:
-      <span class="permit_start_date">{{moment-format reservation.permitStartDate 'LL'}}</span>
-      <span>to</span>
-      <span class="permit_end_date">{{moment-format reservation.permitEndDate 'LL'}}</span>
-    </p>
+  <p>Number of Permits:
+    <span class="permit_quantity">{{reservation.permitQuantity}}</span>
+  </p>
+  <p>Number of Lodging Reservations:
+    <span class="lodging_quantity">{{reservation.lodgingQuantity}}</span>
+  </p>
+  <p>Dates:
+    <span class="permit_start_date">{{moment-format reservation.permitStartDate 'LL'}}</span>
+    <span>to</span>
+    <span class="permit_end_date">{{moment-format reservation.permitEndDate 'LL'}}</span>
+  </p>
 
-    <p>Total Cost:
-      <span class="total_cost">${{reservation.totalCost}}</span>
-    </p>
+  <p>Total Cost:
+    <span class="total_cost">${{reservation.totalCost}}</span>
+  </p>
 </div>
 
 <button {{action "canUpdate"}} class="btn btn-success">Update</button>
@@ -69,4 +68,3 @@
 <button {{action "canUpdate"}} class="btn btn-success">Update</button>
 
 {{/unless}}
-</div>
