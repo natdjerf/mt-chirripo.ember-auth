@@ -5,17 +5,38 @@ export default Ember.Component.extend({
   tagName: 'div',
 
   attributeBindings: ['style'],
-  style:"height: 200px; ",
+  style:"height: 350px; width: 100%;",
 
   map:null,
 
   didInsertElement: function() {
-    var mapOptions = {
-      center: new google.maps.LatLng(9.4845506, -83.6286731),
-      zoom: 9,
+    let myLatLng = {lat: 9.5011288, lng: -83.6554445};
+    let mapOptions = {
+      center: myLatLng,
+      zoom: 10,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     };
-    var map = new google.maps.Map(this.$().get(0),mapOptions);
+    let marker = new google.maps.Marker({
+      position: myLatLng,
+});
+
+    let map = new google.maps.Map(this.$().get(0),mapOptions);
     this.set("map",map);
+    marker.setMap(map);
   }
 });
+
+// export default Ember.Component.extend({
+//   id: 'map-canvas',
+//     // let container = this.$('.map-canvas')[0];
+//     insertMap: function() {
+//         let options = {
+//             center: new window.google.maps.LatLng(
+//                 this.get('latitude'),
+//                 this.get('longitude')
+//             ),
+//             zoom: 15
+//         };
+//         new window.google.maps.Map(this.$().get(0), options);
+//     }.on('didInsertElement')
+// });
