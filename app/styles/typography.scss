@@ -1,7 +1,61 @@
 body {
-  color: #c61331;
+  background: url(https://c4.staticflickr.com/1/685/22639053571_7680688325_k.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+// @font-face {
+//   font-family: 'MyWebFont';
+//   src: url('webfont.eot'); /* IE9 Compat Modes */
+//   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+//        url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
+//        url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
+//        url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+//        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+// }
+
+
+@font-face {
+  font-family: 'MelmaCracked';
+  src: url('/fonts/MelmaCracked.ttf')  format('truetype');
+}
+@font-face {
+  font-family: 'Muchacho';
+  src: url('/fonts/Muchacho.otf')  format('opentype');
+}
+@font-face {
+  font-family: 'Redbud-Regular';
+  src: url('/fonts/Redbud-Regular.ttf')  format('truetype');
+}
+
+@font-face {
+  font-family: 'Redbud-Spurs';
+  src: url('/fonts/Redbud-Spurs.ttf')  format('truetype');
+}
+
+
+
+.index-header h1 {
+  font-family: 'Redbud-Regular';
+  text-transform: uppercase;
+  font-size: 60px;
+  -webkit-transform: rotate(-3deg);
+  /* Firefox */
+  // -moz-transform: rotate(-3deg);
+  /* IE */
+  -ms-transform: rotate(-3deg);
+  /* Opera */
+  -o-transform: rotate(-3deg);
+}
+
+.glyphicon-map-marker {
+  font-style: italic;
 }
 .navbar-default {
     background-color: rgba(0, 0, 0, 0);
+    background-image: none;
     border-color: rgba(0, 0, 0, 0);
+    box-shadow: none;
 }
