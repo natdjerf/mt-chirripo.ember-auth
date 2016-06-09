@@ -1,4 +1,5 @@
 {{#unless canUpdate}}
+<div class="upcoming-res section">
 <h2>Upcoming Reservations</h2>
 <h3>{{moment-to-now reservation.permitStartDate hidePrefix=true allow-empty=true}} until your trip!</h3>
 
@@ -16,7 +17,7 @@
     </p>
 
     <p>Total Cost:
-      <span class="total_cost" contenteditable>{{reservation.totalCost}}</span>
+      <span class="total_cost">${{reservation.totalCost}}</span>
     </p>
 </div>
 
@@ -29,14 +30,17 @@
 
 <div>
 <form {{action "modifyReservation" newReservation on="submit"}}>
+  <span>Number of Park Entry Permits:</span>
     {{input type="number"
             placeholder="Permit Quantity"
             class="input-group form-control"
-            value=permitQuantity}}
+            value=newReservation.permitQuantity}}
+    <span>Number of Beds at Crestones Base Camp:</span>
     {{input type="number"
             placeholder="Lodging Quantity"
             class="input-group form-control"
-            value=lodgingQuantity}}
+            value=newReservation.lodgingQuantity}}
+    <span>First Day of Park Entry:</span>
     {{bootstrap-datepicker
       autoclose=true
       date=mydate
@@ -44,7 +48,8 @@
       valueFormat='YYYY-MM-DD'
       placeholder="Permit Start Date"
       class="input-group form-control"
-      value=permitStartDate}}
+      value=newReservation.permitStartDate}}
+    <span>Last Day of Park Entry</span>
     {{bootstrap-datepicker
       autoclose=true
       startDate=permitStartDate
@@ -52,10 +57,10 @@
       valueFormat='YYYY-MM-DD'
       placeholder="Permit End Date"
       class="input-group form-control"
-      value=permitEndDate}}
+      value=newReservation.permitEndDate}}
 
   <h4>Total Cost:</h4>
-  <div>${{totalCost}}</div>
+  <div>${{calculate-total newReservation.permitStartDate newReservation.permitEndDate newReservation.permitQuantity newReservation.lodgingQuantity}}</div>
 
   <input type="submit" class="btn btn-succss">
 </form>
@@ -64,3 +69,4 @@
 <button {{action "canUpdate"}} class="btn btn-success">Update</button>
 
 {{/unless}}
+</div>
