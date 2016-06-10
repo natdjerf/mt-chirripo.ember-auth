@@ -1,12 +1,12 @@
-// @font-face {
-//   font-family: 'MyWebFont';
-//   src: url('webfont.eot'); /* IE9 Compat Modes */
-//   src: url('webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-//        url('webfont.woff2') format('woff2'), /* Super Modern Browsers */
-//        url('webfont.woff') format('woff'), /* Pretty Modern Browsers */
-//        url('webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-//        url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
-// }
+@font-face {
+  font-family: 'SlimJoe';
+  src: url('/fonts/SlimJoe.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/SlimJoe.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/SlimJoe.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/SlimJoe.woff') format('woff'), /* Pretty Modern Browsers */
+       url('/fonts/SlimJoe.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/SlimJoe.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 
 
 @font-face {
@@ -14,8 +14,8 @@
   src: url('/fonts/MelmaCracked.ttf')  format('truetype');
 }
 @font-face {
-  font-family: 'Muchacho';
-  src: url('/fonts/Muchacho.otf')  format('opentype');
+  font-family: 'MelmaLine';
+  src: url('/fonts/MelmaLine.ttf')  format('truetype');
 }
 @font-face {
   font-family: 'Redbud-Regular';
@@ -27,15 +27,25 @@
   src: url('/fonts/Redbud-Spurs.ttf')  format('truetype');
 }
 
+@font-face {
+  font-family: 'MoonLight';
+  src: url('/fonts/MoonLight.otf')  format('opentype');
+}
+
 html,
 body {
     width: 100%;
     height: 100%;
 }
 
-body.ember-application {
+body {
   margin: 0;
   padding: 0;
+}
+
+body {
+  font-family: 'MoonLight';
+  font-size: 18px;
 }
 
 .index-header {
@@ -48,20 +58,33 @@ body.ember-application {
 
 .index-header h1 {
   display: table-cell;
-  font-family: 'Redbud-Regular';
+  font-family: 'Redbud-Regular','MelmaCracked';
   text-transform: uppercase;
   font-size: 60px;
-  -webkit-transform: rotate(-3deg);
-  -moz-transform: rotate(-3deg);
-  -ms-transform: rotate(-3deg);
-  -o-transform: rotate(-3deg);
+  -webkit-transform: rotate(-4deg);
+  -moz-transform: rotate(-4deg);
+  -ms-transform: rotate(-4deg);
+  -o-transform: rotate(-4deg);
   text-align: center;
   vertical-align: middle;
+  word-break: break-all;
+}
+
+h1, h2, h3 {
+  font-family: 'Redbud-Spurs', 'MelmaCracked';
+  text-transform: uppercase;
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .landing-section {
   background-color: #fff;
   height: 400px;
+  padding-bottom: 20px;
+}
+
+.landing-about {
+  padding-bottom: 20px;
 }
 
 .glyphicon-map-marker {
@@ -77,4 +100,97 @@ body.ember-application {
 .map-canvas {
     height: 500px;
     width: 200px;
+}
+
+.about-details, .plan-pricing, .landing-about, .form-horizontal {
+  margin: 20px;
+}
+
+
+#ribbon-container {
+  position: absolute;
+  top: 9%;
+  right: -20px;
+  overflow: visible;
+
+  font-size: 18px;
+  line-height: 18px;
+}
+
+#ribbon-container:before {
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 0;
+  border-top: 29px solid rgba(0, 0, 0, .3);
+  border-bottom: 29px solid rgba(0, 0, 0, .3);
+  border-right: 29px solid rgba(0, 0, 0, .3);
+  border-left: 29px solid transparent;
+}
+
+#ribbon-container:after {
+  content: "";
+  height: 3px;
+  background: rgba(0, 0, 0, .3);
+  display: block;
+  position: absolute;
+  bottom: -3px;
+  left: 58px;
+  right: 3px;
+}
+
+#ribbon-container a {
+  display: block;
+  padding: 20px;
+  position: relative;
+  background: #12772A;
+  overflow: visible;
+  height: 58px;
+  margin-left: 29px;
+  color: #fff;
+  text-decoration: none;
+}
+
+#ribbon-container a:after {
+  /* this creates the "folded" part of our ribbon */
+
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  border-top: 15px solid #004a70;
+  border-right: 15px solid transparent;
+}
+
+#ribbon-container a:before {
+  /* this creates the "forked" part of our ribbon */
+
+  content: "";
+  height: 0;
+  width: 0;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: -29px;
+  border-top: 29px solid #12772A;
+  border-bottom: 29px solid #12772A;
+  border-right: 29px solid transparent;
+  border-left: 29px solid transparent;
+}
+
+#ribbon-container a:hover {
+  background: #009ff1;
+}
+
+#ribbon-container a:hover:before {
+  /* this makes sure that the "forked" part of the ribbon changes color with the anchor on :hover */
+
+  border-top: 29px solid #004a70;
+  border-bottom: 29px solid #004a70;
 }

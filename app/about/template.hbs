@@ -2,8 +2,10 @@
 
   <div class="landing section">
 
+<h3>Mount Chirripo</h3>
+
     <div class="landing-about section">
-      <p>Costa Rica is famous for tropical beaches, but this tiny country is also home to some of the tallest mountains in Central America. Cerro Chirripó, Costa Rica’s highest peak, rises 12,533 feet above sea level and offers sweeping views of the surrounding Talamanca Mountains. Its dramatic peak is reached via a 12.4-mile (20-km) trail that rises over 7,218 feet (2,000 meters) from the tiny mountain village of San Gerardo de Rivas. Along the way, hikers pass through cloud forests and páramos—a unique ecosystem found only at high elevations in the New World tropics. Rocky outposts punctuate the otherwise barren hills, and feed a series of glacial lakes that earned the park its iconic name: Chirripó means ‘eternal waters.’ From Chirripó’s summit, sweeping 360-degree views tumble down over graceful valleys and shimmering lakes. On clear days you can see both the Caribbean and the Pacific!</p>
+      <p>Costa Rica is famous for tropical beaches, but this tiny country is also home to some of the tallest mountains in Central America. Cerro Chirripo, Costa Rica’s highest peak, rises 12,533 feet above sea level and offers sweeping views of the surrounding Talamanca Mountains. Its dramatic peak is reached via a 12.4-mile (20-km) trail that rises over 7,218 feet (2,000 meters) from the tiny mountain village of San Gerardo de Rivas. Along the way, hikers pass through cloud forests and páramos—a unique ecosystem found only at high elevations in the New World tropics. Rocky outposts punctuate the otherwise barren hills, and feed a series of glacial lakes that earned the park its iconic name: Chirripo means ‘eternal waters.’ From Chirripo’s summit, sweeping 360-degree views tumble down over graceful valleys and shimmering lakes. On clear days you can see both the Caribbean and the Pacific!</p>
     </div>
 
 
@@ -15,7 +17,8 @@
   {{google-map}}
 </div>
 
-
-{{#link-to 'new'}}
-  <h2>Plan your Trip Today!</h2>
-{{/link-to}}
+{{#if isAuthenticated}}
+{{#link-to 'new'}}<h4>Plan your Trip Today!</h4>{{/link-to}}
+{{else}}
+<h4>{{#link-to "sign-in"}}Start Planning!{{/link-to}}</h4>
+{{/if}}

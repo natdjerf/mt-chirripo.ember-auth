@@ -1,5 +1,7 @@
 {{plan-trip}}
 
+{{#if isAuthenticated}}
+
 <div class="plan section">
 <h1>Plan Your Trip</h1>
   <div>
@@ -40,3 +42,13 @@
   </form>
   </div>
 </div>
+
+{{else}}
+<div class="content-box">
+   <div id="ribbon-container">
+      <span id="ribbon"><h4>{{#link-to "sign-in"}}Start Planning!{{/link-to}}</h4></span>
+   </div>
+</div>
+
+
+{{/if}}

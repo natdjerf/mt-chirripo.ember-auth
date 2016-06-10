@@ -4,6 +4,16 @@ export default Ember.Route.extend({
   auth: Ember.inject.service(),
   flashMessages: Ember.inject.service(),
 
+  activate: function() {
+    Ember.$('body').css('background', "url('/images/chirripo-sunset.jpg') no-repeat center center scroll");
+    Ember.$('body').css('background-attachment', 'fixed');
+    Ember.$('body').css('background-size', 'cover');
+    Ember.$('body').append();
+  },
+  deactivate: function() {
+    Ember.$('body').css('background-image', "none");
+  },
+
   actions: {
     signUp (credentials) {
       this.get('auth').signUp(credentials)
