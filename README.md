@@ -1,23 +1,28 @@
+## Visit Mount Chirripo
 
-### About ###
+A single page web application for booking travel reservations to Costa Rica's Mount Chirripo.
 
-A travel booking site for Costa Rica's Mount Chirripo.
+### Technologies Used
 
-### Technologies ###
+* Ember.js
+* JavaScript
+* HTMLBars
+* SCSS
+* Bootstrap
+* jQuery
 
-Built on an Ember.js front end framework. The back-end API was created using Ruby on Rails.
-Back End API: https://github.com/natdjerf/mt-chirripo.rails-api
+Visit Mount Chirripo back-end repo: https://github.com/natdjerf/mt-chirripo.rails-api
 
-### Development Approach ###
+### User Stories and WireFrames
 
-### User Stories and WireFrames ###
-
-As a user, I want to be able to make an online reservation in advance of a trip. And, if necessary, make changes or cancel.
+As a user, I want to be able to make an online reservation in advance of a trip. And, if necessary, make changes or cancel.  
 As a user, I want to be able to easily view the the details of my upcoming trip.
 As a user, I want to be able to pay securely online in advance.
 
 https://app.moqups.com/nadjerf@gmail.com/zawxrahaMW/view/page/a9221b1ad
 
-### Next Steps ###
+### Next Steps
 
-Incorporate Stripe for online payments, Weather Underground API for viewing current and future weather patterns, and Flickr API for user experience.
+* Incorporate Stripe payment system to allow for complete online reservations and payments
+* Include Weather Underground API to allow users to view current and future weather patterns
+* Flickr API to provide visuals of the past user experiences
