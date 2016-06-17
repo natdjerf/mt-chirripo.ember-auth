@@ -1,42 +1,42 @@
 @font-face {
   font-family: 'SlimJoe';
-  src: url('/fonts/SlimJoe.eot');
+  src: url('style-fonts/SlimJoe.eot');
   // IE9 Compat Modes //
-  src: url('/fonts/SlimJoe.eot?#iefix') format('embedded-opentype'),
+  src: url('style-fonts/SlimJoe.eot?#iefix') format('embedded-opentype'),
   // IE6-IE8 //
-  url('/fonts/SlimJoe.woff2') format('woff2'),
+  url('style-fonts/SlimJoe.woff2') format('woff2'),
   // Super Modern Browsers //
-  url('/fonts/SlimJoe.woff') format('woff'),
+  url('style-fonts/SlimJoe.woff') format('woff'),
   // Pretty Modern Browsers //
-  url('/fonts/SlimJoe.ttf') format('truetype'),
+  url('style-fonts/SlimJoe.ttf') format('truetype'),
   // Safari, Android, iOS //
-  url('/fonts/SlimJoe.svg#svgFontName') format('svg');
+  url('style-fonts/SlimJoe.svg#svgFontName') format('svg');
   // Legacy iOS //
 }
 
 @font-face {
   font-family: 'MelmaCracked';
-  src: url('/fonts/MelmaCracked.ttf') format('truetype');
+  src: url('style-fonts/MelmaCracked.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'MelmaLine';
-  src: url('/fonts/MelmaLine.ttf') format('truetype');
+  src: url('style-fonts/MelmaLine.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Redbud-Regular';
-  src: url('/fonts/Redbud-Regular.ttf') format('truetype');
+  src: url('style-fonts/Redbud-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Redbud-Spurs';
-  src: url('/fonts/Redbud-Spurs.ttf') format('truetype');
+  src: url('style-fonts/Redbud-Spurs.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'MoonLight';
-  src: url('/fonts/MoonLight.otf') format('opentype');
+  src: url('style-fonts/MoonLight.otf') format('opentype');
 }
 
 body,
