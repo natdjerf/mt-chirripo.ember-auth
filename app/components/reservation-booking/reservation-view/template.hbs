@@ -2,6 +2,7 @@
 <h2>Upcoming Reservations</h2>
 <h3>{{moment-to-now reservation.permitStartDate hidePrefix=true allow-empty=true}} until your trip!</h3>
 
+<div class="upcoming-trip-details">
 <div>
   <p>Number of Permits:
     <span class="permit_quantity">{{reservation.permitQuantity}}</span>
@@ -22,6 +23,7 @@
 
 <button {{action "canUpdate"}} class="btn btn-success">Update</button>
 <button {{action "deleteReservation"}} class="btn btn-danger">Cancel This Reservation</button>
+</div>
 
 {{else}}
 
@@ -61,10 +63,11 @@
   <h4>Total Cost:</h4>
   <div>${{calculate-total newReservation.permitStartDate newReservation.permitEndDate newReservation.permitQuantity newReservation.lodgingQuantity}}</div>
 
-  <input type="submit" class="btn btn-succss">
+  <input type="submit" class="btn btn-success">
+  <button {{action "canUpdate"}} class="btn btn-primary">Back</button>
+
 </form>
 </div>
 
-<button {{action "canUpdate"}} class="btn btn-success">Update</button>
 
 {{/unless}}
