@@ -1,80 +1,94 @@
 @font-face {
   font-family: 'SlimJoe';
-  src: url('/fonts/SlimJoe.eot'); /* IE9 Compat Modes */
-  src: url('/fonts/SlimJoe.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('/fonts/SlimJoe.woff2') format('woff2'), /* Super Modern Browsers */
-       url('/fonts/SlimJoe.woff') format('woff'), /* Pretty Modern Browsers */
-       url('/fonts/SlimJoe.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('/fonts/SlimJoe.svg#svgFontName') format('svg'); /* Legacy iOS */
+  src: url('/fonts/SlimJoe.eot');
+  // IE9 Compat Modes //
+  src: url('/fonts/SlimJoe.eot?#iefix') format('embedded-opentype'),
+  // IE6-IE8 //
+  url('/fonts/SlimJoe.woff2') format('woff2'),
+  // Super Modern Browsers //
+  url('/fonts/SlimJoe.woff') format('woff'),
+  // Pretty Modern Browsers //
+  url('/fonts/SlimJoe.ttf') format('truetype'),
+  // Safari, Android, iOS //
+  url('/fonts/SlimJoe.svg#svgFontName') format('svg');
+  // Legacy iOS //
 }
-
 
 @font-face {
   font-family: 'MelmaCracked';
-  src: url('/fonts/MelmaCracked.ttf')  format('truetype');
+  src: url('/fonts/MelmaCracked.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'MelmaLine';
-  src: url('/fonts/MelmaLine.ttf')  format('truetype');
+  src: url('/fonts/MelmaLine.ttf') format('truetype');
 }
+
 @font-face {
   font-family: 'Redbud-Regular';
-  src: url('/fonts/Redbud-Regular.ttf')  format('truetype');
+  src: url('/fonts/Redbud-Regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'Redbud-Spurs';
-  src: url('/fonts/Redbud-Spurs.ttf')  format('truetype');
+  src: url('/fonts/Redbud-Spurs.ttf') format('truetype');
 }
 
 @font-face {
   font-family: 'MoonLight';
-  src: url('/fonts/MoonLight.otf')  format('opentype');
+  src: url('/fonts/MoonLight.otf') format('opentype');
 }
 
-html,
-body {
-    width: 100%;
-    height: 100%;
+body,
+html {
+  width: 100%;
+  height: 100%;
 }
 
 body {
   margin: 0;
   padding: 0;
-}
-
-body {
-  font-family: 'MoonLight';
+  font-family: 'MoonLight', 'Alegreya Sans SC', sans-serif;
   font-size: 18px;
 }
 
 .index-header {
-    color: #fff;
-    display: table;
-    position: relative;
-    width: 100%;
-    height: 600px;
+  color: #fff;
+  display: table;
+  position: relative;
+  width: 100%;
+  height: 600px;
 }
 
 .index-header h1 {
   display: table-cell;
-  font-family: 'Redbud-Regular','MelmaCracked';
-  text-transform: uppercase;
+  font-family: 'Redbud-Regular', 'MelmaCracked', 'Skranji', cursive;
   font-size: 60px;
   -webkit-transform: rotate(-4deg);
   -moz-transform: rotate(-4deg);
   -ms-transform: rotate(-4deg);
   -o-transform: rotate(-4deg);
   text-align: center;
+  text-transform: uppercase;
   vertical-align: middle;
   word-break: break-all;
 }
 
-h1, h2, h3 {
-  font-family: 'Redbud-Spurs', 'MelmaCracked';
-  text-transform: uppercase;
-  text-align: center;
+h1,
+h2,
+h3 {
+  font-family: 'Redbud-Spurs', 'MelmaCracked', 'Skranji', cursive;
   padding-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > li > a {
+  text-shadow: none;
+}
+
+.navbar > .container-fluid .navbar-brand {
+  text-shadow: none;
 }
 
 .landing-section {
@@ -90,21 +104,51 @@ h1, h2, h3 {
 .glyphicon-map-marker {
   font-style: italic;
 }
+
 .navbar-default {
-    background-color: rgba(0, 0, 0, 0);
-    background-image: none;
-    border-color: rgba(0, 0, 0, 0);
-    box-shadow: none;
+  background-color: rgba(0, 0, 0, 0);
+  background-image: none;
+  border-color: rgba(0, 0, 0, 0);
+  box-shadow: none;
 }
 
 .map-canvas {
-    height: 500px;
-    width: 200px;
+  height: 500px;
+  width: 200px;
 }
 
-.about-details, .plan-pricing, .landing-about, .form-horizontal {
+.about-details,
+.landing-about {
   margin: 20px;
 }
+
+.plan-pricing {
+  text-align: center;
+}
+
+.plan-pricing > div {
+  margin-bottom: 6px;
+}
+
+form {
+  margin: 0 auto;
+  max-width: 440px;
+  text-align: center;
+}
+
+.plan form {
+  margin: 0 auto;
+  max-width: 440px;
+  text-align: center;
+}
+
+
+.sign-up-sign-in {
+  bottom: 10px;
+  position: fixed;
+  right: 10px;
+}
+
 
 
 #ribbon-container {
@@ -112,7 +156,6 @@ h1, h2, h3 {
   top: 9%;
   right: -20px;
   overflow: visible;
-
   font-size: 18px;
   line-height: 18px;
 }
@@ -155,8 +198,7 @@ h1, h2, h3 {
 }
 
 #ribbon-container a:after {
-  /* this creates the "folded" part of our ribbon */
-
+  // the "folded" part of the ribbon //
   content: "";
   height: 0;
   width: 0;
@@ -169,8 +211,7 @@ h1, h2, h3 {
 }
 
 #ribbon-container a:before {
-  /* this creates the "forked" part of our ribbon */
-
+  // the "forked" part of the ribbon //
   content: "";
   height: 0;
   width: 0;
@@ -189,8 +230,7 @@ h1, h2, h3 {
 }
 
 #ribbon-container a:hover:before {
-  /* this makes sure that the "forked" part of the ribbon changes color with the anchor on :hover */
-
+  // the "forked" part of the ribbon changes color with the anchor on :hover `//`
   border-top: 29px solid #004a70;
   border-bottom: 29px solid #004a70;
 }

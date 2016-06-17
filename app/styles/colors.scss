@@ -1,6 +1,7 @@
 $black: #000000;
-$white: #ffffff;
 $green: #12772A;
+$light-green: rgb(156, 202, 25);
+$white: #ffffff;
 
 a {
   color: $black;
@@ -15,8 +16,17 @@ a:hover {
 }
 
 .navbar-default .navbar-nav > li > a {
-  color: $green;
+  color: $light-green;
 }
 .navbar > .container-fluid .navbar-brand {
-  color: $green;
+  color: $light-green;
+}
+
+.form-control {
+  background-color: rgba(0, 0, 0, 0.075);
+  border: 1px solid rgba(0, 0, 0, 0);
+}
+
+.sign-up-sign-in a {
+  color: $white;
 }
