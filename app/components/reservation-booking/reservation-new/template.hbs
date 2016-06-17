@@ -10,11 +10,13 @@
       {{input type="number"
               placeholder="Permit Quantity"
               class="input-group form-control"
+              min="1"
               value=reservation.permitQuantity}}
       <span>Number of Beds at Crestones Base Camp:</span>
       {{input type="number"
               placeholder="Lodging Quantity"
               class="input-group form-control"
+              min="0"
               value=reservation.lodgingQuantity}}
       <span>First Day of Park Entry:</span>
       {{bootstrap-datepicker

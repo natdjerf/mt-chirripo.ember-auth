@@ -35,11 +35,13 @@
     {{input type="number"
             placeholder="Permit Quantity"
             class="input-group form-control"
+            min="1"
             value=newReservation.permitQuantity}}
     <span>Number of Beds at Crestones Base Camp:</span>
     {{input type="number"
             placeholder="Lodging Quantity"
             class="input-group form-control"
+            min="0"
             value=newReservation.lodgingQuantity}}
     <span>First Day of Park Entry:</span>
     {{bootstrap-datepicker
@@ -53,7 +55,7 @@
     <span>Last Day of Park Entry</span>
     {{bootstrap-datepicker
       autoclose=true
-      startDate=permitStartDate
+      startDate=newReservation.permitStartDate
       date=mydate
       valueFormat='YYYY-MM-DD'
       placeholder="Permit End Date"
