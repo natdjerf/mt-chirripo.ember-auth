@@ -14,23 +14,23 @@ module.exports = function(defaults) {
   app.import('bower_components/bootstrap-sass/assets/javascripts/bootstrap.js');
   app.import('bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff2', { destDir: 'fonts/bootstrap' });
   app.import('bower_components/bootstrap-sass/assets/fonts/bootstrap/glyphicons-halflings-regular.woff', { destDir: 'fonts/bootstrap' });
-  app.import('vendor/gmaps.js');
+  app.import('bower_components/gmaps.js');
 
 
-  app.import('bower_components/Redbud-Regular/fonts/Redbud-Regular.ttf', {
-    destDir: 'assets/fonts'
+  app.import('bower_components/bootstrap-sass/assets/fonts/Redbud-Regular.ttf', {
+    destDir: 'fonts'
   });
-  app.import('bower_components/Redbud-Spurs/fonts/Redbud-Spurs.ttf', {
-    destDir: 'assets/fonts'
+  app.import('bower_components/bootstrap-sass/assets/fonts/Redbud-Spurs.ttf', {
+    destDir: 'fonts'
   });
-  app.import('bower_components/MelmaCracked/fonts/MelmaCracked.ttf', {
-    destDir: 'assets/fonts'
+  app.import('bower_components/bootstrap-sass/assets/fonts/MelmaCracked.ttf', {
+    destDir: 'fonts'
   });
-  app.import('bower_components/MelmaLine/fonts/MelmaLine.tff', {
-    destDir: 'assets/fonts'
+  app.import('bower_components/bootstrap-sass/assets/fonts/MelmaLine.tff', {
+    destDir: 'fonts'
   });
-  app.import('bower_components/MoonLight/fonts/MoonLight.otf', {
-    destDir: 'assets/fonts'
+  app.import('bower_components/bootstrap-sass/assets/fonts/MoonLight.otf', {
+    destDir: 'fonts'
   });
 
 
