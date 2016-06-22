@@ -17,21 +17,21 @@ module.exports = function(defaults) {
   app.import('bower_components/gmaps.js');
 
 
-  app.import('bower_components/bootstrap-sass/assets/fonts/Redbud-Regular.ttf', {
-    destDir: 'fonts'
-  });
-  app.import('bower_components/bootstrap-sass/assets/fonts/Redbud-Spurs.ttf', {
-    destDir: 'fonts'
-  });
-  app.import('bower_components/bootstrap-sass/assets/fonts/MelmaCracked.ttf', {
-    destDir: 'fonts'
-  });
-  app.import('bower_components/bootstrap-sass/assets/fonts/MelmaLine.tff', {
-    destDir: 'fonts'
-  });
-  app.import('bower_components/bootstrap-sass/assets/fonts/MoonLight.otf', {
-    destDir: 'fonts'
-  });
+  // app.import('bower_components/bootstrap-sass/assets/fonts/Redbud-Regular.ttf', {
+  //   destDir: 'fonts'
+  // });
+  // app.import('bower_components/bootstrap-sass/assets/fonts/Redbud-Spurs.ttf', {
+  //   destDir: 'fonts'
+  // });
+  // app.import('bower_components/bootstrap-sass/assets/fonts/MelmaCracked.ttf', {
+  //   destDir: 'fonts'
+  // });
+  // app.import('bower_components/bootstrap-sass/assets/fonts/MelmaLine.tff', {
+  //   destDir: 'fonts'
+  // });
+  // app.import('bower_components/bootstrap-sass/assets/fonts/MoonLight.otf', {
+  //   destDir: 'fonts'
+  // });
 
 
 
